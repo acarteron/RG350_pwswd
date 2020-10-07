@@ -6,9 +6,12 @@
 
 #include "bright_backend.h"
 
-#define BRIGHT_FILENAME "/sys/class/backlight/pwm-backlight/brightness"
-#define MAX_BRIGHT_FILENAME "/sys/class/backlight/pwm-backlight/max_brightness"
+
+#define SYSFS_DIR "/sys/class/backlight/backlight"
+#define BRIGHT_FILENAME SYSFS_DIR "/brightness"
+#define MAX_BRIGHT_FILENAME SYSFS_DIR "/max_brightness"
 #define BLANKING_FILENAME "/sys/class/graphics/fb0/blank"
+
 
 #ifndef MIN_BRIGHTNESS
 #define MIN_BRIGHTNESS 10
