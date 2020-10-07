@@ -1,8 +1,8 @@
-ifeq ($(CONFIG),)
-CONFIGS:=$(foreach CFG,$(wildcard config-*.mk),$(CFG:config-%.mk=%))
-$(error Please specify CONFIG, possible values: $(CONFIGS))
-endif
-
+# ifeq ($(CONFIG),)
+# CONFIGS:=$(foreach CFG,$(wildcard config-*.mk),$(CFG:config-%.mk=%))
+# $(error Please specify CONFIG, possible values: $(CONFIGS))
+# endif
+CONFIG=gcw0
 include config-$(CONFIG).mk
 
 TARGET = pwswd
